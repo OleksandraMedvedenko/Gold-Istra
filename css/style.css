@@ -281,7 +281,8 @@ li {
     color: #fff;
 }
 .footer__body {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 160px;
 }
 .footer__title {
@@ -367,6 +368,15 @@ li {
     .footer__body{
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        gap: 120px;
+    }
+}
+@media(max-width:480px){
+    .footer__body{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 24px;
+        place-items: center;
     }
 }
 /*-----------------------------------*/
@@ -513,6 +523,11 @@ li {
 }
 .swiper-button-prev{}
 .swiper-button-next {}
+@media (max-width: 768px) {
+    .swiper-products {
+        --swiper-slides-per-view: 2;
+    }
+}
 /*------------------------------------*/
 .gift {
     border-bottom: 0.50px solid #000;
@@ -561,6 +576,32 @@ li {
 .gift__text span{
     font-size: 20px;
     font-weight: 600;
+}
+@media(max-width:768px){
+    .gift__container{
+        border-right: none;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .gift__decor{
+        left: 0;
+    }
+    .gift__image img{
+        width: 768px;
+    }
+    .gift__content{
+        left: 0;
+        gap: 8px;
+        align-items: center;
+        padding: 0 0 40px;
+    }
+    .gift__title{
+        font-size: 32px;
+    }
+    .gift__text,
+    .gift__text span{
+        font-size: 16px;
+    }
 }
 /*---------------------------*/
 .fresh {
@@ -622,6 +663,52 @@ li {
 .item {
     padding-right: 0;
     padding-left: 18px;
+}
+@media(max-width:768px){
+    .fresh__items{
+        border: none;
+    }
+    .fresh__item{
+        padding-bottom: 0px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 16px;
+        height: auto;
+        padding-right: 0;
+        width: 270px;
+    }
+    .fresh__item-info{
+        width: 100%;
+        padding: 0px 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .item__title{
+        font-size: 20px;
+    }
+    .item__text{
+        gap: 4px;
+    }
+    .item__text-available,
+    .item__text-time{
+        font-size: 12px;
+    }
+    .item{
+        flex-direction: column-reverse;
+        padding-left: 0;
+    }
+    .section__name{
+        display: flex;
+        padding: 12px 43px 12px 44px;
+        justify-content: center;
+        align-items: center;
+    }
+    .section__title{
+        padding: 12px 43px 12px 44px;
+        font-size: 32px;
+    }
 }
 /*------------------------------*/
 .about {
