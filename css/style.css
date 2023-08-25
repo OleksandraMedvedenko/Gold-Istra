@@ -222,7 +222,7 @@ li {
     content: '';
     background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
     position: absolute;
-    z-index: 5;
+    z-index: 2;
     left: 0;
     right: 0;
     bottom: 0;
@@ -236,7 +236,7 @@ li {
     padding-top: 329px;
     padding-left: 100px;
     position: relative;
-    z-index: 10;
+    z-index: 3;
 }
 .top__text {
     color: #FFF;
@@ -245,7 +245,7 @@ li {
     padding-left: 100px;
     margin-bottom: 44px;
     position: relative;
-    z-index: 10;
+    z-index: 3;
 }
 .top__link {
     text-align: center;
@@ -257,7 +257,7 @@ li {
     text-transform: uppercase;
     margin-left: 100px;
     position: relative;
-    z-index: 10;
+    z-index: 3;
 }
 .top__link:hover{
     background-color: #ba4619
@@ -940,6 +940,10 @@ li {
     .header__logo {
         position: absolute;
         z-index: 10;
+    }
+    .menu__btn span{
+        transform: rotate(-45deg);
+        transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
     }
     .menu{
         justify-content: center;
