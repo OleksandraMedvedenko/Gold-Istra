@@ -271,6 +271,9 @@ li {
 .products-title {
     padding: 17px 435px 16px;
 }
+.products__container{
+    display: flex;
+}
 .products__swiper {
     
 }
@@ -364,14 +367,32 @@ li {
     border: none;
     cursor: pointer;
 }
-.prev {
-    background-image: url('images/prev.svg');
-}
+.prev,
 .next {
-    background-image: url('images/next.svg');
+    flex-shrink: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 58px;
+    stroke-width: 2px;
+    stroke: #000;
 }
-.swiper-button-next {
-    margin-left: 10px; 
+.prev{
+    height: auto;
+    margin-right: 20px;
+    width: auto;
+    align-self: center;
+    padding-top: 114px;
+}
+.next{
+    height: auto;
+    margin-left: 20px;
+    width: auto;
+    align-self: center;
+    padding-top: 114px;
 }
 /*------------------------------------*/
 .gift {
@@ -789,6 +810,61 @@ li {
         margin: 0 430px;
     }
 }
+@media(max-width:1024px){
+    .top__title {
+        padding-top: 220px;
+    }
+    .section__title {
+        padding: 17px 365px 16px;
+        font-size: 26px;
+    }
+    .gift__content {
+        padding: 45px 0;
+    }
+    .gift__description {
+        width: auto;
+    }
+    .gift__text {
+        font-size: 14px;
+    }
+    .fresh__item{
+        padding-bottom: 0px;
+        align-items: flex-start;
+        gap: 8px;
+        height: 188px;
+        padding-right: 0;
+    }
+    .item__image img{
+        width: 185px;
+        height: 185px;
+    }
+    .fresh__item-info {
+        padding: 35px 0;
+    }
+    .item__title {
+        font-size: 33px;
+    }
+    .company__picture {
+        flex: 0 1 50%;
+        width: 506px;
+    }
+    .company__text {
+        font-size: 18px;
+    }
+    .shipping__picture{
+        height: 321px;
+    }
+    .shipping__info {
+        width: 100%;
+        padding: 30px 0 40px;
+    }
+    .map {
+        background: none;
+    }
+    .where__info {
+        padding: 184px 0;
+    }
+}
 @media(max-width: 976px){
     .header__logo {
         margin: 0 415px;
@@ -908,6 +984,11 @@ li {
     .swiper-products {
         --swiper-slides-per-view: 2;
     }
+    .prev, .next {
+        position: relative;
+        top: -422px;
+        margin: 0;
+    }
     .gift__container{
         border-right: none;
         flex-direction: column;
@@ -986,6 +1067,10 @@ li {
     }
     .company__picture {
         padding: 0 23px 0;
+    }
+    .company__picture img{
+        position: relative;
+        left: -45px;
     }
     .company__info {
         flex: 0 1 50%;
@@ -1271,12 +1356,21 @@ li {
         font-size: 14px;
     }
 }
-@media(max-width:424px){
+@media(max-width:425px){
     .menu__btn {
         left: 380px;
     }
     .section__title {
         font-size: 24px;
+    }
+    
+    .swiper-slide {
+        height: inherit;
+    }
+    .prev, .next {
+        position: relative;
+        top: -403px;
+        margin: 0;
     }
     .gift__content {
         padding: 0 10px 40px;
@@ -1294,6 +1388,7 @@ li {
     }
     .company__picture img {
         width: 375px;
+        left: 45px;
     }
     .shipping__picture img{
         width: 385px;
@@ -1379,9 +1474,37 @@ li {
         font-size: 27px;
     }
 }
+@media(max-width:375px){
+    .header__logo {
+        width: 60px;
+        height: 60px;
+        margin: 0 166px;
+    }
+    .prev, .next {
+        position: relative;
+        top: -423px;
+        margin: 0;
+    }
+    .swiper-slide {
+        height: auto;
+        width: inherit;
+    }
+    .company__picture img {
+        width: 350px;
+        left: 54px;
+    }
+}
 @media(max-width:373px){
     .section__title {
         font-size: 19px;
+    }
+    .prev, .next {
+        position: relative;
+        top: -490px;
+        margin: 0;
+    }
+    .company__picture img {
+        left: 60px;
     }
     .footer__title{
         font-size: 26px;
@@ -1469,8 +1592,27 @@ li {
     .section__title {
         font-size: 14px;
     }
+    .prev, .next {
+        position: relative;
+        top: -400px;
+        margin: 0;
+    }
+    .company__picture img {
+        width: 281px;
+        left: 90px;
+    }
     .item__image img {
         width: 157px;
         height: 157px;
+    }
+    .contacts__info-list {
+        margin-top: 36px;
+        position: relative;
+        top: 680px;
+    }
+    .contacts__info-social {
+        margin-top: 36px;
+        position: relative;
+        top: 680px;
     }
 }

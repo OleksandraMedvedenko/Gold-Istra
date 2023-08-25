@@ -24,6 +24,9 @@ if (productsSwiper) {
             320: {
                 slidesPerView: 2
             },
+            425: {
+                slidesPerView: 2
+            },
             768: {
                 slidesPerView: 2
             },
