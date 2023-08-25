@@ -101,6 +101,23 @@ li {
     position: absolute;
     margin: 0px 510px;
 }
+.menu__btn{
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+.menu__btn span{
+    height: 2px;
+    background-color: #fff;
+    width: 100%;
+}
 /*--------------------------------------*/
 .footer {
     background-color: #9B6647;
