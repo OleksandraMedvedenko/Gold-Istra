@@ -278,6 +278,7 @@ li {
 .swiper-products {
     border-left: 0.50px solid #000;
     border-right: 0.50px solid #000;
+    display: flex;
 }
 .swiper {
 }
@@ -349,8 +350,29 @@ li {
     font-weight: 700;
     text-transform: uppercase;
 }
-.swiper-button-prev{}
-.swiper-button-next {}
+.swiper-button-prev,
+.swiper-button-next {
+    background: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    flex-shrink: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.prev {
+    background-image: url('images/prev.svg');
+}
+.next {
+    background-image: url('images/next.svg');
+}
+.swiper-button-next {
+    margin-left: 10px; 
+}
 /*------------------------------------*/
 .gift {
     border-bottom: 0.50px solid #000;
