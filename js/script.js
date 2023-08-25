@@ -36,13 +36,10 @@ if (productsSwiper) {
     });
 }
 
-$('header .burger').document.querySelector('header .burger').click(()=>{
-    $('header nav').document.querySelector('header nav').slideToggle()
-    $('header .burger').document.querySelector('header .burger').toggleClass('active')
-})
-//const menuBtn = document.querySelector('.menu__btn');
-//const menu = document.querySelector ('.menu__list');
 
-//menuBtn.addEventListener('click', () => {
-//    menu.classList.toggle('menu__list--active')
-//})
+const menuBtn = document.querySelector('.menu__btn');
+const menu = document.querySelector ('.menu__list');
+
+menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('menu__list--active')
+})
